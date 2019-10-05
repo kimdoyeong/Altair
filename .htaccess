@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^(\/*)w/(.+)(\/*)$ ./index.php?action=view&page=$2 [L]
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^(\/*)new/(.+)(\/*)$ ./index.php?action=new&page=$2 [L]
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^(\/*)handle/(.+)(\/*)$ ./index.php?action=handle&handle=$2 [L]
